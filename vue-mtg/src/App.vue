@@ -1,19 +1,20 @@
 <template>
   <div id="app">
-    <MtG />
+    <MtGcard />
     <div style="margin-left: 10px;">
       <img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442288&type=card" />
     </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </div>
 </template>
 
 <script>
-import MtG from './components/MtG.vue'
+import MtGcard from './components/MtGcard.vue'
 
 export default {
   name: 'app',
   components: {
-    MtG
+    MtGcard
   }
 }
 </script>
