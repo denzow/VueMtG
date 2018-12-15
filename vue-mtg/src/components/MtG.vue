@@ -1,13 +1,16 @@
 <template>
   <div class="mtg">
     <div class="card-base">
+      <div class="card-inner">
+
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'MtG',
   props: {
     msg: String
   }
@@ -21,9 +24,17 @@ export default {
 }
 
 .card-base {
-  width: 220px;
-  height: 310px;
+  width: 203px;
+  height: 271px;
   border: solid 10px #000;
   border-radius: 15px;
+  background-color: #5599EE;
+  padding: 5px 5px 15px;
+}
+
+.card-inner {
+  background-color: red;
+  height: 100%;
+  width: 100%;
 }
 </style>
