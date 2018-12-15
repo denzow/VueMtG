@@ -4,27 +4,28 @@
       <div class="card-background">
         <div class="card-inner">
           <div class="card-header">
-            <span>対抗呪文</span>
+            <span>{{ cardName }}</span>
             <span>
               <span class="mana fas fa-tint"></span>
               <span class="mana fas fa-tint"></span>
             </span>
           </div>
           <div class="card-picture-base">
-            <img class="card-picture" src="https://prtimes.jp/i/24729/1/origin/d24729-1-468463-0.jpg">
+            <img class="card-picture" :src="pictureSrc">
           </div>
           <div class="card-category">
-            <span>インスタント</span>
-            <span>scouty</span>
+            <span>{{ type }}</span>
+            <span>{{ expansion }}</span>
           </div>
           <div class="card-text-container">
             <div class="card-text">
-              呪文１つを対象とし、それを打ち消す。
+              {{ cardText }}
             </div>
           </div>
         </div>
       </div>
     </div>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </div>
 </template>
 
@@ -32,7 +33,26 @@
 export default {
   name: 'MtG',
   props: {
-    msg: String
+    cardName: {
+      type: String,
+      default: '',
+    },
+    pictureSrc: {
+      type: String,
+      default: '',
+    },
+    type: {
+      type: String,
+      default: '',
+    },
+    expansion: {
+      type: String,
+      default: '',
+    },
+    cardText: {
+      type: String,
+      default: '',
+    },
   }
 }
 </script>
@@ -84,6 +104,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   font-size: 8px;
+  font-weight: 700;
   padding: 2px;
   border: 2px ridge #22AADD;
   border-radius: 5px;
@@ -101,6 +122,7 @@ export default {
 .card-picture {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .card-text-container {

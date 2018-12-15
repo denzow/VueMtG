@@ -1,10 +1,15 @@
 <template>
   <div id="app">
-    <MtGcard />
+    <MtGcard
+      cardName="遅刻許可"
+      pictureSrc="https://pbs.twimg.com/profile_images/719895139146031104/XgAKgZvu_400x400.jpg"
+      type="インスタント"
+      expansion="scouty"
+      cardText="記事1つを対象とし、その締切を1日伸ばす。"
+    />
     <div style="margin-left: 10px;">
       <img src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=442288&type=card" />
     </div>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   </div>
 </template>
 
